@@ -140,14 +140,19 @@
             background: var(--accent-color);
         }
         
-        .hero-bg {
+        .hero picture {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
             z-index: 0;
+        }
+        
+        .hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .hero::before {
@@ -302,13 +307,29 @@
     
     <main>
         <section class="hero" id="home">
-            <img 
-                src="hero-image.jpg" 
-                alt="Fashion hero image" 
-                class="hero-bg"
-                loading="eager"
-                fetchpriority="high"
-            >
+            <picture>
+                <source srcset="images/optimized/hero-480w.webp 480w,
+                                images/optimized/hero-768w.webp 768w,
+                                images/optimized/hero-1024w.webp 1024w,
+                                images/optimized/hero-1440w.webp 1440w,
+                                images/optimized/hero-1920w.webp 1920w"
+                        sizes="100vw"
+                        type="image/webp">
+                <source srcset="images/optimized/hero-480w.jpg 480w,
+                                images/optimized/hero-768w.jpg 768w,
+                                images/optimized/hero-1024w.jpg 1024w,
+                                images/optimized/hero-1440w.jpg 1440w,
+                                images/optimized/hero-1920w.jpg 1920w"
+                        sizes="100vw"
+                        type="image/jpeg">
+                <img 
+                    src="hero-image.jpg" 
+                    alt="Fashion hero image" 
+                    class="hero-bg"
+                    loading="eager"
+                    fetchpriority="high"
+                >
+            </picture>
             <div class="hero-content">
                 <h1>NEW COLLECTION 2024</h1>
                 <p>Discover the latest trends in fashion</p>
@@ -320,13 +341,25 @@
             <h2 class="section-title">FEATURED COLLECTIONS</h2>
             <div class="grid">
                 <article class="collection-item">
-                    <img 
-                        src="collection1.jpg" 
-                        alt="Summer Collection - Light and breezy designs" 
-                        loading="lazy"
-                        width="600"
-                        height="800"
-                    >
+                    <picture>
+                        <source srcset="images/optimized/collection1-300w.webp 300w,
+                                        images/optimized/collection1-450w.webp 450w,
+                                        images/optimized/collection1-600w.webp 600w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                                type="image/webp">
+                        <source srcset="images/optimized/collection1-300w.jpg 300w,
+                                        images/optimized/collection1-450w.jpg 450w,
+                                        images/optimized/collection1-600w.jpg 600w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                                type="image/jpeg">
+                        <img 
+                            src="collection1.jpg" 
+                            alt="Summer Collection - Light and breezy designs" 
+                            loading="lazy"
+                            width="600"
+                            height="800"
+                        >
+                    </picture>
                     <div class="collection-overlay">
                         <h3>Summer Collection</h3>
                         <p>Light and breezy designs</p>
@@ -334,13 +367,25 @@
                 </article>
                 
                 <article class="collection-item">
-                    <img 
-                        src="collection2.jpg" 
-                        alt="Evening Wear - Elegant and sophisticated" 
-                        loading="lazy"
-                        width="600"
-                        height="800"
-                    >
+                    <picture>
+                        <source srcset="images/optimized/collection2-300w.webp 300w,
+                                        images/optimized/collection2-450w.webp 450w,
+                                        images/optimized/collection2-600w.webp 600w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                                type="image/webp">
+                        <source srcset="images/optimized/collection2-300w.jpg 300w,
+                                        images/optimized/collection2-450w.jpg 450w,
+                                        images/optimized/collection2-600w.jpg 600w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                                type="image/jpeg">
+                        <img 
+                            src="collection2.jpg" 
+                            alt="Evening Wear - Elegant and sophisticated" 
+                            loading="lazy"
+                            width="600"
+                            height="800"
+                        >
+                    </picture>
                     <div class="collection-overlay">
                         <h3>Evening Wear</h3>
                         <p>Elegant and sophisticated</p>
@@ -348,13 +393,25 @@
                 </article>
                 
                 <article class="collection-item">
-                    <img 
-                        src="collection3.jpg" 
-                        alt="Casual Chic - Everyday essentials" 
-                        loading="lazy"
-                        width="600"
-                        height="800"
-                    >
+                    <picture>
+                        <source srcset="images/optimized/collection3-300w.webp 300w,
+                                        images/optimized/collection3-450w.webp 450w,
+                                        images/optimized/collection3-600w.webp 600w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                                type="image/webp">
+                        <source srcset="images/optimized/collection3-300w.jpg 300w,
+                                        images/optimized/collection3-450w.jpg 450w,
+                                        images/optimized/collection3-600w.jpg 600w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                                type="image/jpeg">
+                        <img 
+                            src="collection3.jpg" 
+                            alt="Casual Chic - Everyday essentials" 
+                            loading="lazy"
+                            width="600"
+                            height="800"
+                        >
+                    </picture>
                     <div class="collection-overlay">
                         <h3>Casual Chic</h3>
                         <p>Everyday essentials</p>

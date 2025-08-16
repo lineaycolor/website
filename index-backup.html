@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lineaycolor - Fashion & Style | Modern Fashion Brand</title>
+    <meta name="description" content="Discover Lineaycolor's latest fashion collections. Modern, elegant designs for the contemporary lifestyle. Shop our Summer, Evening, and Casual collections.">
+    <meta name="keywords" content="fashion, style, clothing, lineaycolor, modern fashion, designer clothes, fashion brand">
+    <meta property="og:title" content="Lineaycolor - Fashion & Style">
+    <meta property="og:description" content="Discover modern fashion collections at Lineaycolor. Elegant designs for every occasion.">
+    <meta property="og:image" content="https://lineaycolor.github.io/website/hero-image.jpg">
+    <meta property="og:url" content="https://lineaycolor.github.io/website/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://lineaycolor.github.io/website/">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #666;
+        }
+        
+        .hero {
+            margin-top: 60px;
+            height: 90vh;
+            background: url('hero-image.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #333;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .collections {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .collection-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .collection-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .collection-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .collection-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.9);
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .collection-item:hover .collection-overlay {
+            transform: translateY(0);
+        }
+        
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LINEAYCOLOR</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>NEW COLLECTION 2024</h1>
+            <p>Discover the latest trends in fashion</p>
+            <a href="#collections" class="btn">SHOP NOW</a>
+        </div>
+    </section>
+    
+    <section class="collections" id="collections">
+        <h2 class="section-title">FEATURED COLLECTIONS</h2>
+        <div class="grid">
+            <div class="collection-item">
+                <img src="collection1.jpg" alt="Collection 1">
+                <div class="collection-overlay">
+                    <h3>Summer Collection</h3>
+                    <p>Light and breezy designs</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="collection2.jpg" alt="Collection 2">
+                <div class="collection-overlay">
+                    <h3>Evening Wear</h3>
+                    <p>Elegant and sophisticated</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="collection3.jpg" alt="Collection 3">
+                <div class="collection-overlay">
+                    <h3>Casual Chic</h3>
+                    <p>Everyday essentials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Lineaycolor. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">&#x1F426;</a>
+            <a href="#">&#x1F4F7;</a>
+            <a href="#">f</a>
+        </div>
+    </footer>
+</body>
+</html>
