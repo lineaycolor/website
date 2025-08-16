@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fashion Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .image-container {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .image-box {
+            position: relative;
+            display: inline-block;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .label {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        button {
+            padding: 10px 20px;
+            background: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lineaycolor Fashion Images</h1>
+    <p>Click any image to download it</p>
+    
+    <div class="image-container">
+        <div class="image-box">
+            <canvas id="hero" width="1920" height="1080"></canvas>
+            <div class="label">hero-image.jpg (1920x1080)</div>
+        </div>
+        
+        <div class="image-box">
+            <canvas id="collection1" width="600" height="800"></canvas>
+            <div class="label">collection1.jpg (600x800)</div>
+        </div>
+        
+        <div class="image-box">
+            <canvas id="collection2" width="600" height="800"></canvas>
+            <div class="label">collection2.jpg (600x800)</div>
+        </div>
+        
+        <div class="image-box">
+            <canvas id="collection3" width="600" height="800"></canvas>
+            <div class="label">collection3.jpg (600x800)</div>
+        </div>
+    </div>
+
+    <script>
+        // Hero image - elegant gradient
+        const hero = document.getElementById('hero').getContext('2d');
+        const heroGradient = hero.createLinearGradient(0, 0, 1920, 1080);
+        heroGradient.addColorStop(0, '#1a1a1a');
+        heroGradient.addColorStop(0.5, '#2d2d2d');
+        heroGradient.addColorStop(1, '#0a0a0a');
+        hero.fillStyle = heroGradient;
+        hero.fillRect(0, 0, 1920, 1080);
+        
+        // Add text to hero
+        hero.fillStyle = 'white';
+        hero.font = 'bold 120px Georgia';
+        hero.textAlign = 'center';
+        hero.fillText('LINEAYCOLOR', 960, 500);
+        hero.font = '40px Arial';
+        hero.fillText('FASHION & STYLE', 960, 600);
+        
+        // Collection 1 - Summer vibes
+        const col1 = document.getElementById('collection1').getContext('2d');
+        const col1Gradient = col1.createLinearGradient(0, 0, 600, 800);
+        col1Gradient.addColorStop(0, '#FFE5CC');
+        col1Gradient.addColorStop(1, '#FFAB91');
+        col1.fillStyle = col1Gradient;
+        col1.fillRect(0, 0, 600, 800);
+        col1.fillStyle = '#333';
+        col1.font = 'bold 48px Arial';
+        col1.textAlign = 'center';
+        col1.fillText('SUMMER', 300, 400);
+        col1.font = '24px Arial';
+        col1.fillText('COLLECTION', 300, 450);
+        
+        // Collection 2 - Evening elegance
+        const col2 = document.getElementById('collection2').getContext('2d');
+        const col2Gradient = col2.createLinearGradient(0, 0, 600, 800);
+        col2Gradient.addColorStop(0, '#1a1a2e');
+        col2Gradient.addColorStop(1, '#16213e');
+        col2.fillStyle = col2Gradient;
+        col2.fillRect(0, 0, 600, 800);
+        col2.fillStyle = '#C9A961';
+        col2.font = 'bold 48px Arial';
+        col2.textAlign = 'center';
+        col2.fillText('EVENING', 300, 400);
+        col2.font = '24px Arial';
+        col2.fillText('ELEGANCE', 300, 450);
+        
+        // Collection 3 - Casual chic
+        const col3 = document.getElementById('collection3').getContext('2d');
+        const col3Gradient = col3.createLinearGradient(0, 0, 600, 800);
+        col3Gradient.addColorStop(0, '#E8E8E8');
+        col3Gradient.addColorStop(1, '#B8B8B8');
+        col3.fillStyle = col3Gradient;
+        col3.fillRect(0, 0, 600, 800);
+        col3.fillStyle = '#333';
+        col3.font = 'bold 48px Arial';
+        col3.textAlign = 'center';
+        col3.fillText('CASUAL', 300, 400);
+        col3.font = '24px Arial';
+        col3.fillText('CHIC', 300, 450);
+        
+        // Download functionality
+        document.querySelectorAll('canvas').forEach(canvas => {
+            canvas.addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.download = this.id + '.jpg';
+                link.href = this.toDataURL('image/jpeg', 0.9);
+                link.click();
+            });
+        });
+    </script>
+</body>
+</html>
