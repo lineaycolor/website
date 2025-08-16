@@ -1,0 +1,49 @@
+<!-- Google Tag Manager Container -->
+<!-- This file contains the GTM implementation for Lineaycolor -->
+
+<!-- Google Tag Manager (head) -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');
+</script>
+
+<!-- Google Tag Manager (noscript) - Add immediately after <body> tag -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<!-- Enhanced E-commerce Data Layer Structure -->
+<script>
+// Initialize dataLayer with default values
+window.dataLayer = window.dataLayer || [];
+
+// User properties
+dataLayer.push({
+  'event': 'userData',
+  'user': {
+    'id': '', // Set when user logs in
+    'type': 'guest', // guest, registered, vip
+    'firstVisit': new Date().toISOString(),
+    'loyalty': {
+      'tier': 'bronze', // bronze, silver, gold, platinum
+      'points': 0
+    }
+  }
+});
+
+// Page view with enhanced data
+dataLayer.push({
+  'event': 'pageView',
+  'page': {
+    'title': document.title,
+    'url': window.location.href,
+    'path': window.location.pathname,
+    'referrer': document.referrer,
+    'type': 'home' // home, category, product, checkout, etc.
+  }
+});
+</script>

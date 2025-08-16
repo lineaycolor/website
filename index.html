@@ -1,26 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebSite">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lineaycolor - Fashion & Style | Modern Fashion Brand</title>
-    <meta name="description" content="Discover Lineaycolor's latest fashion collections. Modern, elegant designs for the contemporary lifestyle. Shop our Summer, Evening, and Casual collections.">
-    <meta name="keywords" content="fashion, style, clothing, lineaycolor, modern fashion, designer clothes, fashion brand">
-    <meta property="og:title" content="Lineaycolor - Fashion & Style">
-    <meta property="og:description" content="Discover modern fashion collections at Lineaycolor. Elegant designs for every occasion.">
-    <meta property="og:image" content="https://lineaycolor.github.io/website/hero-image.jpg">
-    <meta property="og:url" content="https://lineaycolor.github.io/website/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Lineaycolor - Modern Fashion Brand | Designer Clothing & Contemporary Style</title>
+    <meta name="title" content="Lineaycolor - Modern Fashion Brand | Designer Clothing & Contemporary Style">
+    <meta name="description" content="Discover Lineaycolor's designer clothing collections. Shop modern women's fashion, from elegant evening wear to casual chic. Sustainable luxury fashion with free shipping on orders over $100.">
+    <meta name="keywords" content="lineaycolor, modern fashion brand, designer clothing, women's fashion online, contemporary women's wear, sustainable fashion, luxury casual wear, summer collection 2024, evening wear dresses">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Lineaycolor">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lineaycolor.netlify.app/">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lineaycolor.netlify.app/">
+    <meta property="og:title" content="Lineaycolor - Modern Fashion Brand | Designer Clothing">
+    <meta property="og:description" content="Shop Lineaycolor's latest fashion collections. Modern, elegant designs for the contemporary woman. Free shipping on orders over $100.">
+    <meta property="og:image" content="https://lineaycolor.netlify.app/hero-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Lineaycolor">
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://lineaycolor.github.io/website/">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+    <meta property="twitter:url" content="https://lineaycolor.netlify.app/">
+    <meta name="twitter:title" content="Lineaycolor - Modern Fashion Brand">
+    <meta name="twitter:description" content="Discover modern fashion at Lineaycolor. Shop designer clothing with free shipping.">
+    <meta name="twitter:image" content="https://lineaycolor.netlify.app/hero-image.jpg">
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="hero-image.jpg" fetchpriority="high">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Lineaycolor",
+      "url": "https://lineaycolor.netlify.app/",
+      "logo": "https://lineaycolor.netlify.app/logo.png",
+      "description": "Modern fashion brand offering designer clothing for contemporary women",
+      "sameAs": [
+        "https://www.facebook.com/lineaycolor",
+        "https://www.instagram.com/lineaycolor",
+        "https://www.twitter.com/lineaycolor"
+      ]
+    }
     </script>
+    
+    <!-- Critical CSS -->
     <style>
+        :root {
+            --primary-color: #000;
+            --text-color: #333;
+            --bg-color: #fff;
+            --accent-color: #f0f0f0;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -30,11 +82,12 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-color);
+            background: var(--bg-color);
         }
         
         header {
-            background: #fff;
+            background: var(--bg-color);
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: fixed;
@@ -66,24 +119,35 @@
         
         nav a {
             text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
+            color: var(--text-color);
+            transition: opacity 0.3s;
         }
         
         nav a:hover {
-            color: #666;
+            opacity: 0.7;
         }
         
         .hero {
             margin-top: 60px;
             height: 90vh;
-            background: url('hero-image.jpg') center/cover;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
+            overflow: hidden;
+            background: var(--accent-color);
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
         }
         
         .hero::before {
@@ -94,11 +158,12 @@
             right: 0;
             bottom: 0;
             background: rgba(0,0,0,0.4);
+            z-index: 1;
         }
         
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         
         .hero h1 {
@@ -111,7 +176,7 @@
             display: inline-block;
             padding: 12px 30px;
             background: white;
-            color: #333;
+            color: var(--text-color);
             text-decoration: none;
             margin-top: 1rem;
             transition: transform 0.3s;
@@ -144,13 +209,16 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            background: var(--accent-color);
+            aspect-ratio: 3/4;
         }
         
         .collection-item img {
             width: 100%;
-            height: 400px;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.3s;
+            display: block;
         }
         
         .collection-item:hover img {
@@ -203,11 +271,25 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Loading state */
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lazy.loaded {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <div class="logo">LINEAYCOLOR</div>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -218,48 +300,127 @@
         </nav>
     </header>
     
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>NEW COLLECTION 2024</h1>
-            <p>Discover the latest trends in fashion</p>
-            <a href="#collections" class="btn">SHOP NOW</a>
-        </div>
-    </section>
-    
-    <section class="collections" id="collections">
-        <h2 class="section-title">FEATURED COLLECTIONS</h2>
-        <div class="grid">
-            <div class="collection-item">
-                <img src="collection1.jpg" alt="Collection 1">
-                <div class="collection-overlay">
-                    <h3>Summer Collection</h3>
-                    <p>Light and breezy designs</p>
-                </div>
+    <main>
+        <section class="hero" id="home">
+            <img 
+                src="hero-image.jpg" 
+                alt="Fashion hero image" 
+                class="hero-bg"
+                loading="eager"
+                fetchpriority="high"
+            >
+            <div class="hero-content">
+                <h1>NEW COLLECTION 2024</h1>
+                <p>Discover the latest trends in fashion</p>
+                <a href="#collections" class="btn">SHOP NOW</a>
             </div>
-            <div class="collection-item">
-                <img src="collection2.jpg" alt="Collection 2">
-                <div class="collection-overlay">
-                    <h3>Evening Wear</h3>
-                    <p>Elegant and sophisticated</p>
-                </div>
+        </section>
+        
+        <section class="collections" id="collections">
+            <h2 class="section-title">FEATURED COLLECTIONS</h2>
+            <div class="grid">
+                <article class="collection-item">
+                    <img 
+                        src="collection1.jpg" 
+                        alt="Summer Collection - Light and breezy designs" 
+                        loading="lazy"
+                        width="600"
+                        height="800"
+                    >
+                    <div class="collection-overlay">
+                        <h3>Summer Collection</h3>
+                        <p>Light and breezy designs</p>
+                    </div>
+                </article>
+                
+                <article class="collection-item">
+                    <img 
+                        src="collection2.jpg" 
+                        alt="Evening Wear - Elegant and sophisticated" 
+                        loading="lazy"
+                        width="600"
+                        height="800"
+                    >
+                    <div class="collection-overlay">
+                        <h3>Evening Wear</h3>
+                        <p>Elegant and sophisticated</p>
+                    </div>
+                </article>
+                
+                <article class="collection-item">
+                    <img 
+                        src="collection3.jpg" 
+                        alt="Casual Chic - Everyday essentials" 
+                        loading="lazy"
+                        width="600"
+                        height="800"
+                    >
+                    <div class="collection-overlay">
+                        <h3>Casual Chic</h3>
+                        <p>Everyday essentials</p>
+                    </div>
+                </article>
             </div>
-            <div class="collection-item">
-                <img src="collection3.jpg" alt="Collection 3">
-                <div class="collection-overlay">
-                    <h3>Casual Chic</h3>
-                    <p>Everyday essentials</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
     
     <footer>
         <p>&copy; 2024 Lineaycolor. All rights reserved.</p>
         <div class="social-links">
-            <a href="#">&#x1F426;</a>
-            <a href="#">&#x1F4F7;</a>
-            <a href="#">f</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">f</a>
         </div>
     </footer>
+    
+    <!-- Performance and Analytics Scripts -->
+    <script>
+        // Initialize dataLayer
+        window.dataLayer = window.dataLayer || [];
+        
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
+            });
+        }
+        
+        // Lazy loading for images
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                img.classList.add('lazy');
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <!-- Deferred Analytics Loading -->
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                // Load analytics scripts
+                const scripts = [
+                    '/analytics/analytics-events.js',
+                    '/analytics/facebook-pixel.js',
+                    '/analytics/ab-testing.js',
+                    '/analytics/heatmap-tracking.js'
+                ];
+                
+                scripts.forEach(src => {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.async = true;
+                    document.body.appendChild(script);
+                });
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
